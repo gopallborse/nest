@@ -10,4 +10,4 @@ Content-Type: application/json
 }
 
 ### Get a message by ID
-GET http://localhost:3000/messages/490
+GET http://localhost:3000/messages/49000
