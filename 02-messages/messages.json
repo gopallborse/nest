@@ -1,1 +1,7 @@
-{"490":{"id":490,"content":"Hello, Gopall!"}}
+{
+  "490": { "id": 490, "content": "Hello, Gopall!" },
+  "726": {
+    "id": 726,
+    "content": "Message after refactoring for dependency injection."
+  }
+}

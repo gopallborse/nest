@@ -13,13 +13,13 @@ import { MessagesService } from './messages.service';
 
 @Controller('messages')
 export class MessagesController {
-  messagesService: MessagesService;
+  // messagesService: MessagesService;
 
-  constructor() {
-    // Don't do this on real apps
-    // Use dependency injection instead
-    this.messagesService = new MessagesService();
-  }
+  // constructor(messagesService: MessagesService) {
+  //   this.messagesService = messagesService;
+  // }
+
+  constructor(public messagesService: MessagesService) {}
 
   @Get()
   listMessages() {
