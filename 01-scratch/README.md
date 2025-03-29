@@ -1,0 +1,1 @@
+# command to run scratch app - npx ts-node-dev .\src\main.ts
