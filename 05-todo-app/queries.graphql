@@ -1,0 +1,44 @@
+# Create
+mutation {
+  createTodo(input: {title: "Test Task", description: "First Try"}) {
+    _id
+    title
+    description
+    completed
+  }
+}
+
+# GetByID
+query {
+  todo(id: "id") {
+    title
+  }
+}
+
+# GetAll
+query {
+  todos {
+    _id
+    title
+    description
+    completed
+  }
+}
+
+# Update
+mutation {
+  updateTodo(input: {id: "id", title: "Updated", completed: true}) {
+    _id
+    title
+    description
+    completed
+  }
+}
+
+# Delete
+mutation {
+  deleteTodo (id: "68383a374f5f59123dd8ca82") {
+    _id
+    title
+  }
+}
