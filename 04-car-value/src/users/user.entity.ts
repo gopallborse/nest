@@ -6,6 +6,7 @@ import {
   AfterUpdate,
   AfterRemove,
 } from 'typeorm';
+// import { Exclude } from 'class-transformer';
 
 @Entity()
 export class User {
@@ -16,19 +17,20 @@ export class User {
   email: string;
 
   @Column()
+  // @Exclude()
   password: string;
 
-  @AfterInsert()
+  @AfterInsert() // hook
   logInsert() {
     console.log('Inserted User with id', this.id);
   }
 
-  @AfterUpdate()
+  @AfterUpdate() // hook
   logUpdate() {
     console.log('Updated User with id', this.id);
   }
 
-  @AfterRemove()
+  @AfterRemove() // hook
   logRemove() {
     console.log('Removed User with id', this.id);
   }

@@ -14,8 +14,8 @@ export class UsersService {
   constructor(@InjectRepository(User) private repo: Repository<User>) {}
 
   create(email: string, password: string) {
-    const user = this.repo.create({ email, password });
-    return this.repo.save(user);
+    const user = this.repo.create({ email, password }); // create is used to create an instance of the entity, hook executes with this.
+    return this.repo.save(user); // save is used for actual persistence
   }
 
   findOne(id: number) {

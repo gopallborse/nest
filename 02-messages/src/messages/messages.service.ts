@@ -5,11 +5,18 @@ import { MessagesRepository } from './messages.repository';
 export class MessagesService {
   // messagesRepo: MessagesRepository;
 
+  // constructor() {
+  //   // Service is creating it's own dependencies. Inversion of control. NEVER do this in real apps. This was temporary just to understand the concept of Dependency injection. Will use DI and remove this soon.
+  //   this.messagesRepo = new MessagesRepository();
+  // }
+
+  // ---------------------------------
+
+  // messagesRepo: MessagesRepository;
+  constructor(public messagesRepo: MessagesRepository) {} // this Typescript shorthand is equivalent to following
   // constructor(messagesRepo: MessagesRepository) {
   //   this.messagesRepo = messagesRepo;
   // }
-
-  constructor(public messagesRepo: MessagesRepository) {}
 
   findOne(id: string) {
     return this.messagesRepo.findOne(id);
